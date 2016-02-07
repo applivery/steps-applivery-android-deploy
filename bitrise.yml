@@ -26,7 +26,7 @@ workflows:
           inputs:
           - content: |-
               #!/bin/bash
-              echo "APPLIVERY_DEPLOY_STATUS: ${HOCKEYAPP_DEPLOY_STATUS}"
+              echo "APPLIVERY_DEPLOY_STATUS: ${APPLIVERY_DEPLOY_STATUS}"
 
 
   # ----------------------------------------------------------------
