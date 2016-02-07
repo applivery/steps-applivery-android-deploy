@@ -62,7 +62,7 @@ curl_res=$?
 echo
 echo " --- Result ---"
 echo " * cURL command exit code: ${curl_res}"
-echo " * response JSON: ${json}"
+echo " * Response JSON: ${json}"
 echo " --------------"
 echo
 
@@ -99,7 +99,6 @@ envman add --key "APPLIVERY_DEPLOY_STATUS" --value "success"
 
 
 # final results
-echo "# Success"
-echo "* Deploy Result: **success**"
+echo "* Deploy Result: Success"
 
 exit 0
