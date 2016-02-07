@@ -7,9 +7,9 @@ description: |-
     Register a Applivery account at [http://www.applivery..com/](http://www.applivery.com)
     and create an App to utilize this step.
 
-website: https://github.com/...
-source_code_url: https://github.com/...
-support_url: https://github.com/.../issues
+website: https://github.com/applivery/steps-applivery-deploy
+source_code_url: hhttps://github.com/applivery/steps-applivery-deploy
+support_url: https://github.com/applivery/steps-applivery-deploy/issues
 host_os_tags:
   - osx-10.10
 project_type_tags:
