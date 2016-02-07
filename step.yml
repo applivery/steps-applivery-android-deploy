@@ -9,9 +9,9 @@ description: |-
 
     You also need to get your *Account API Key* for you account and the *App Id* for the app.
 
-website: https://github.com/applivery/steps-applivery-deploy
-source_code_url: hhttps://github.com/applivery/steps-applivery-deploy
-support_url: https://github.com/applivery/steps-applivery-deploy/issues
+website: https://github.com/applivery/steps-applivery-ios-deploy
+source_code_url: https://github.com/applivery/steps-applivery-ios-deploy
+support_url: https://github.com/applivery/steps-applivery-ios-deploy/issues
 host_os_tags:
   - osx-10.10
 project_type_tags:
