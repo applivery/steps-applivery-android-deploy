@@ -17,7 +17,6 @@ project_type_tags:
 type_tags:
   - deploy
   - Applivery
-  - Apps
 is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
@@ -38,8 +37,7 @@ inputs:
     opts:
       title: "Account API Key"
       summary: ""
-      description: |-
-        TBD documentation
+      description: "TBD documentation"
       is_expand: true
       is_required: false
       is_dont_change_value: false
@@ -47,8 +45,7 @@ inputs:
     opts:
       title: "Applivery: App ID"
       summary: ""
-      description: |-
-        TBD documentation
+      description: "TBD documentation"
       is_expand: true
       is_required: false
       is_dont_change_value: false
@@ -65,8 +62,7 @@ inputs:
     opts:
       title: "Notify Testers?"
       summary: ""
-      description: |-
-        TBD documentation
+      description: "TBD documentation"
       value_options: [true, false]
       is_expand: true
       is_required: true
@@ -75,8 +71,7 @@ inputs:
     opts:
       title: "(Optional) Comma-separated list of tags"
       summary: ""
-      description: |
-        Comma-separated list of tags.
+      description: "Comma-separated list of tags"
       is_expand: true
       is_required: false
       is_dont_change_value: false
