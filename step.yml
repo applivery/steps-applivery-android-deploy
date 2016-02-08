@@ -2,12 +2,12 @@ title: "Applivery.com iOS Deploy"
 summary: Deploy your awesome iOS Application to Applivery.com
 description: |-
   Deploy an iOS application to [Applivery](http://www.applivery.com),
-    add notes and notify testers.
+  add notes and notify testers.
 
-    Register a Applivery account at [http://www.applivery..com/](http://www.applivery.com)
-    and create an App to utilize this step.
+  Register a Applivery account at [http://www.applivery..com/](http://www.applivery.com)
+  and create an App to utilize this step.
 
-    You also need to get your *Account API Key* for you account and the *App Id* for the app.
+  You also need to get your *Account API Key* for you account and the *App Id* for the app.
 
 website: https://github.com/applivery/steps-applivery-ios-deploy
 source_code_url: https://github.com/applivery/steps-applivery-ios-deploy
@@ -19,22 +19,18 @@ project_type_tags:
 type_tags:
   - deploy
   - Applivery
+  - iOS
 is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
-dependencies:
-  - manager: brew
-    name: git
-run_if: ""
+run_if: ".IsCI"
 inputs:
   - ipa_path: "$BITRISE_IPA_PATH"
     opts:
       title: "IPA file path"
       summary: ""
       description: ""
-      is_expand: true
       is_required: true
-      is_dont_change_value: false
   - api_token: ""
     opts:
       title: "Account API Key"
@@ -47,9 +43,7 @@ inputs:
         Sign in to your [Applivery.com](http://dashboard.applivery.com) account,
         click on Developers menu option from the left side menu and copy it from the
         Account API Key section.
-      is_expand: true
-      is_required: false
-      is_dont_change_value: false
+      is_required: true
   - app_id: ""
     opts:
       title: "Applivery: App ID"
@@ -62,50 +56,30 @@ inputs:
         Sign in to your [Applivery.com](http://dashboard.applivery.com) account,
         click on Applications menu option from the left side menu, click on the desired App.
         You'll find the App Id inside the (i) information block (written in red).
-      is_expand: true
       is_required: false
-      is_dont_change_value: false
   - notes: "Deployed with Bitrise Applivery.com iOS Deploy Step."
     opts:
       title: "Notes attached to the deploy"
       summary: ""
       description: "Additional build/release notes"
-      is_expand: true
-      is_required: false
-      is_dont_change_value: false
-  - notify: true
+  - notify: "true"
     opts:
       title: "Notify Testers?"
       summary: ""
       description: "This flag allows you to automatically notify your testers vía email."
-      value_options: [true, false]
-      is_expand: true
+      value_options: ["true", "false"]
       is_required: true
-      is_dont_change_value: false
   - tags: ""
     opts:
       title: "(Optional) Comma-separated list of tags"
       summary: ""
       description: "Comma-separated list of tags"
-      is_expand: true
       is_required: false
-      is_dont_change_value: false
-  - os: "ios"
-    opts:
-      title: "Operative system"
-      summary: ""
-      description: ""
-      is_expand: true
-      is_required: true
-      is_dont_change_value: true
   - version_name: ""
     opts:
       title: "(Optional) Human readable version name"
       summary: ""
       description: "Human readable version name for this build."
-      is_expand: true
-      is_required: false
-      is_dont_change_value: false
 outputs:
   - APPLIVERY_DEPLOY_STATUS:
     opts:

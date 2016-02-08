@@ -9,6 +9,7 @@ function echoStatusFailed {
   echo " --------------"
 }
 
+############# VALIDATIONS ##############
 
 # IPA
 if [ ! -f "${ipa_path}" ] ; then
@@ -18,17 +19,30 @@ if [ ! -f "${ipa_path}" ] ; then
   exit 1
 fi
 
-# App api_token
-if [ -z "${api_token}" ] ; then
+# APPLIVERY API TOKEN
+if [ -z "${APPLIVERY_API_TOKEN}" ] ; then
   echo "# Error"
-  echo '* No App api_token provided as environment variable. Terminating...'
+  echo '* No App APPLIVERY_API_TOKEN provided as environment variable. Terminating...'
   echoStatusFailed
   exit 1
 fi
 
+# APPLIVER APP ID
+if [ -z "${APPLIVERY_APP_ID}" ] ; then
+  echo "# Error"
+  echo '* No App APPLIVERY_APP_ID provided as environment variable. Terminating...'
+  echoStatusFailed
+  exit 1
+fi
+
+############# DEFINITIONS ##############
+
+api_token="${APPLIVERY_API_TOKEN}"
+app_id="${APPLIVERY_APP_ID}"
+
 echo
 echo "========== Configs =========="
-echo "* api_token: ${api_token}"
+echo "* api_token: ********"
 echo "* app_id: ${app_id}"
 echo "* version_name: ${version_name}"
 echo "* notes: ${notes}"
@@ -46,7 +60,7 @@ curl_cmd="$curl_cmd -F \"app=${app_id}\""
 curl_cmd="$curl_cmd -F \"versionName=${version_name}\""
 curl_cmd="$curl_cmd -F \"notes=${notes}\""
 curl_cmd="$curl_cmd -F \"notify=${notify}\""
-curl_cmd="$curl_cmd -F \"os=${os}\""
+curl_cmd="$curl_cmd -F \"os=ios\""
 curl_cmd="$curl_cmd -F \"tags=${tags}\""
 curl_cmd="$curl_cmd -F \"package=@${ipa_path}\""
 curl_cmd="$curl_cmd https://dashboard.applivery.com/api/builds"
