@@ -1,8 +1,6 @@
-# My Awesome Step
+# Applivery iOS Deploy Step
 
-My Awesome Step is a solid starting code base for
-a new Step.
-
+This is the new and official [Applivery.com](http://www.applivery.com) step to deploy iOS Apps in [Bitrise.io](http://bitrise.io).
 
 ## How to use this Step
 
@@ -13,7 +11,8 @@ and call `bitrise run test`.
 *Check the `bitrise.yml` file for required inputs which have to be
 added to your `.bitrise.secrets.yml` file!*
 
+## Step configuration
+* **Applivery API Key:** This is the API Key to access your account. Sign in to your [Applivery.com](http://dashboard.applivery.com) account, click on `Developers` menu option from the left side menu and copy it from the `Account API Key` section.
+* **App Id:** This is the App Id that identifies your App in Applivery.com. Sign in to your [Applivery.com](http://dashboard.applivery.com) account, click on `Applications` menu option from the left side menu, click on the desired App. You'll find the `App Id` inside the (i) information block (written in red).
 
-## Share your own Step
-
-You can share your Step or step version with the [bitrise CLI](https://github.com/bitrise-io/bitrise). Just run `bitrise share` and follow the guide it prints.
+*Check `step.yml` file for more information*
