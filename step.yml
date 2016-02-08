@@ -8,7 +8,6 @@ description: |-
   and create an App to utilize this step.
 
   You also need to get your *Account API Key* for you account and the *App Id* for the app.
-
 website: https://github.com/applivery/steps-applivery-ios-deploy
 source_code_url: https://github.com/applivery/steps-applivery-ios-deploy
 support_url: https://github.com/applivery/steps-applivery-ios-deploy/issues
