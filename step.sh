@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "=> Starting Applivery iOS Deploy"
+
 THIS_SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 function echoStatusFailed {
@@ -41,7 +43,7 @@ api_token="${APPLIVERY_API_TOKEN}"
 app_id="${APPLIVERY_APP_ID}"
 
 echo
-echo "========== Configs =========="
+echo "========== CONFIGS =========="
 echo "* api_token: ********"
 echo "* app_id: ${app_id}"
 echo "* version_name: ${version_name}"
@@ -74,10 +76,10 @@ json=$(eval $curl_cmd)
 curl_res=$?
 
 echo
-echo " --- Result ---"
+echo "========== RESULT =========="
 echo " * cURL command exit code: ${curl_res}"
-echo " * Response JSON: ${json}"
-echo " --------------"
+echo " * JSON response: ${json}"
+echo "============================"
 echo
 
 if [ ${curl_res} -ne 0 ] ; then
