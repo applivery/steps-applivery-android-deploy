@@ -15,4 +15,4 @@ added to your `.bitrise.secrets.yml` file!*
 * **Applivery API Key:** This is the API Key to access your account. Sign in to your [Applivery.com](http://dashboard.applivery.com) account, click on `Developers` menu option from the left side menu and copy it from the `Account API Key` section.
 * **App Id:** This is the App Id that identifies your App in Applivery.com. Sign in to your [Applivery.com](http://dashboard.applivery.com) account, click on `Applications` menu option from the left side menu, click on the desired App. You'll find the `App Id` inside the (i) information block (written in red).
 
-*Check `.step.yml` file for more information*
+*Check `step.yml` file for more information*
