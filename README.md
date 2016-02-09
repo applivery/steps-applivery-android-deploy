@@ -1,6 +1,6 @@
-# Applivery iOS Deploy Step
+# Applivery Android Deploy Step
 
-This is the new and official [Applivery.com](http://www.applivery.com) step to deploy iOS Apps in [Bitrise.io](http://bitrise.io).
+This is the new and official [Applivery.com](http://www.applivery.com) step to deploy Android Apps in [Bitrise.io](http://bitrise.io).
 
 ## How to use this Step
 

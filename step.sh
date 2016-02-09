@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "=> Starting Applivery iOS Deploy"
+echo "=> Starting Applivery Android Deploy"
 
 THIS_SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -14,9 +14,9 @@ function echoStatusFailed {
 ############# VALIDATIONS ##############
 
 # IPA
-if [ ! -f "${ipa_path}" ] ; then
+if [ ! -f "${apk_path}" ] ; then
   echo "# Error"
-  echo "* No IPA found to deploy. Specified path was: ${ipa_path}"
+  echo "* No IPA found to deploy. Specified path was: ${apk_path}"
   echoStatusFailed
   exit 1
 fi
@@ -51,7 +51,7 @@ echo "* notes: ${notes}"
 echo "* notify: ${notify}"
 echo "* os: ${os}"
 echo "* tags: ${tags}"
-echo "* ipa_path: ${ipa_path}"
+echo "* apk_path: ${apk_path}"
 echo
 
 ###########################
@@ -62,9 +62,9 @@ curl_cmd="$curl_cmd -F \"app=${app_id}\""
 curl_cmd="$curl_cmd -F \"versionName=${version_name}\""
 curl_cmd="$curl_cmd -F \"notes=${notes}\""
 curl_cmd="$curl_cmd -F \"notify=${notify}\""
-curl_cmd="$curl_cmd -F \"os=ios\""
+curl_cmd="$curl_cmd -F \"os=android\""
 curl_cmd="$curl_cmd -F \"tags=${tags}\""
-curl_cmd="$curl_cmd -F \"package=@${ipa_path}\""
+curl_cmd="$curl_cmd -F \"package=@${apk_path}\""
 curl_cmd="$curl_cmd https://dashboard.applivery.com/api/builds"
 
 echo

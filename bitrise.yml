@@ -4,7 +4,7 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 app:
   envs:
   # define these in your .bitrise.secrets.yml
-  - IPA_PATH: $IPA_PATH
+  - APK_PATH: $APK_PATH
   - API_TOKEN: $API_TOKEN
   - APP_ID: $APP_ID
 
@@ -18,7 +18,7 @@ workflows:
           - is_create_path: true
       - path::./:
           inputs:
-          - ipa_path: "${IPA_PATH}"
+          - apk_path: "${$APK_PATH}"
           - api_token: "${APPLIVERY_API_TOKEN}"
           - app_id: "${APPLIVERY_APP_ID}"
       - script:
