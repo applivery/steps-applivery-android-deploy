@@ -24,7 +24,7 @@ is_always_run: false
 is_skippable: false
 run_if: ".IsCI"
 inputs:
-  - apk_path: "$BITRISE_IPA_PATH"
+  - apk_path: "$BITRISE_APK_PATH"
     opts:
       title: "APK file path"
       summary: ""

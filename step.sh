@@ -16,7 +16,7 @@ function echoStatusFailed {
 # IPA
 if [ ! -f "${apk_path}" ] ; then
   echo "# Error"
-  echo "* No IPA found to deploy. Specified path was: ${apk_path}"
+  echo "* No APK found to deploy. Specified path was: ${apk_path}"
   echoStatusFailed
   exit 1
 fi
