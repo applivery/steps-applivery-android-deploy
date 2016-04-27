@@ -48,8 +48,6 @@ bitrise_git_branch="${BITRISE_GIT_BRANCH}"
 bitrise_git_tag="${BITRISE_GIT_TAG}"
 bitrise_git_commit="${BITRISE_GIT_COMMIT}"
 bitrise_git_message="${BITRISE_GIT_MESSAGE}"
-bitrise_provision_url="${BITRISE_PROVISION_URL}"
-bitrise_certificate_url="${BITRISE_CERTIFICATE_URL}"
 
 echo
 echo "========== CONFIGS =========="
@@ -71,8 +69,6 @@ echo "* bitrise_git_branch: ${bitrise_git_branch}"
 echo "* bitrise_git_tag: ${bitrise_git_tag}"
 echo "* bitrise_git_commit: ${bitrise_git_commit}"
 echo "* bitrise_git_message: ${bitrise_git_message}"
-echo "* bitrise_provision_url: ${bitrise_provision_url}"
-echo "* bitrise_certificate_url: ${bitrise_certificate_url}"
 echo
 
 ###########################
@@ -96,8 +92,6 @@ curl_cmd="$curl_cmd -F \"bitrise_git_branch=${bitrise_git_branch}\""
 curl_cmd="$curl_cmd -F \"bitrise_git_tag=${bitrise_git_tag}\""
 curl_cmd="$curl_cmd -F \"bitrise_git_commit=${bitrise_git_commit}\""
 curl_cmd="$curl_cmd -F \"bitrise_git_message=${bitrise_git_message}\""
-curl_cmd="$curl_cmd -F \"bitrise_provision_url=${bitrise_provision_url}\""
-curl_cmd="$curl_cmd -F \"bitrise_certificate_url=${bitrise_certificate_url}\""
 curl_cmd="$curl_cmd https://dashboard.applivery.com/api/builds"
 
 echo
