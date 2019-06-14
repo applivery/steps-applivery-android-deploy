@@ -31,15 +31,15 @@ fi
 
 ############# DEFINITIONS ##############
 
-bitrise_build_number="${BITRISE_BUILD_NUMBER}"
-git_repository_url="${GIT_REPOSITORY_URL}"
-bitrise_app_url="${BITRISE_APP_URL}"
-bitrise_build_url="${BITRISE_BUILD_URL}"
-bitrise_build_trigger_timestamp="${BITRISE_BUILD_TRIGGER_TIMESTAMP}"
-bitrise_git_branch="${BITRISE_GIT_BRANCH}"
-bitrise_git_tag="${BITRISE_GIT_TAG}"
-bitrise_git_commit="${BITRISE_GIT_COMMIT}"
-bitrise_git_message="${BITRISE_GIT_MESSAGE}"
+buildNumber="${BITRISE_BUILD_NUMBER}"
+repositoryUrl="${GIT_REPOSITORY_URL}"
+ciUrl="${BITRISE_APP_URL}"
+buildUrl="${BITRISE_BUILD_URL}"
+triggerTimestamp="${BITRISE_BUILD_TRIGGER_TIMESTAMP}"
+branch="${BITRISE_GIT_BRANCH}"
+tag="${BITRISE_GIT_TAG}"
+commit="${BITRISE_GIT_COMMIT}"
+commitMessage="${BITRISE_GIT_MESSAGE}"
 
 echo
 echo "========== CONFIGURATION =========="
