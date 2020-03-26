@@ -81,7 +81,6 @@ curl_cmd="$curl_cmd -F \"changelog=${changelog}\""
 curl_cmd="$curl_cmd -F \"notifyCollaborators=${notifyCollaborators}\""
 curl_cmd="$curl_cmd -F \"notifyEmployees=${notifyEmployees}\""
 curl_cmd="$curl_cmd -F \"tags=${tags}\""
-curl_cmd="$curl_cmd -F \"build=@${apk_path}\""
 
 # Choose binary file to upload (APK or AAB), prioritizing AABs over APKs if possible
 if [ -f "${aab_path}" ]; then
