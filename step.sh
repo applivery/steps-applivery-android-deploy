@@ -70,8 +70,6 @@ echo "* buildUrl: ${buildUrl}"
 echo "* ciUrl: ${ciUrl}"
 echo "* repositoryUrl: ${repositoryUrl}"
 echo "* buildNumber: ${buildNumber}"
-
-
 echo
 
 ###########################
@@ -84,6 +82,16 @@ curl_cmd="$curl_cmd -F \"notifyCollaborators=${notifyCollaborators}\""
 curl_cmd="$curl_cmd -F \"notifyEmployees=${notifyEmployees}\""
 curl_cmd="$curl_cmd -F \"tags=${tags}\""
 curl_cmd="$curl_cmd -F \"build=@${apk_path}\""
+
+# Choose binary file to upload (APK or AAB), prioritizing AABs over APKs if possible
+if [ -f "${aab_path}" ]; then
+  # Using AAB
+  curl_cmd="$curl_cmd -F \"build=@${aab_path}\""
+else
+  # Using SPK
+  curl_cmd="$curl_cmd -F \"build=@${apk_path}\""
+fi
+
 curl_cmd="$curl_cmd -F \"deployer.name=bitrise\""
 curl_cmd="$curl_cmd -F \"deployer.info.commitMessage=${commitMessage}\""
 curl_cmd="$curl_cmd -F \"deployer.info.commit=${commit}\""
