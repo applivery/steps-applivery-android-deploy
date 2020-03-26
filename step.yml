@@ -28,7 +28,13 @@ inputs:
       title: "APK file path"
       summary: ""
       description: ""
-      is_required: true
+      is_required: false
+  - aab_path: "$BITRISE_AAB_PATH"
+    opts:
+      title: "AAB file path"
+      summary: ""
+      description: ""
+      is_required: false
   - appToken: "$APPLIVERY_APP_TOKEN"
     opts:
       title: "App Token"

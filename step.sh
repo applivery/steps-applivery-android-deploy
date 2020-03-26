@@ -13,10 +13,13 @@ function echoStatusFailed {
 
 ############# VALIDATIONS ##############
 
-# IPA
-if [ ! -f "${apk_path}" ] ; then
+# APK
+if [ ! -f "${apk_path}" ] &&  [ ! -f "${aab_path}" ]; then
   echo "# Error"
-  echo "* No APK found to deploy. Specified path was: ${apk_path}"
+  echo "* No APK found to deploy"
+  echo "* Specified APK path was: ${apk_path}"
+  echo "* Specified AAB path was: ${aab_path}"
+  echo "* Terminating..."
   echoStatusFailed
   exit 1
 fi
@@ -24,7 +27,8 @@ fi
 # APPLIVERY API TOKEN
 if [ -z "${appToken}" ] ; then
   echo "# Error"
-  echo '* No App Token provided as environment variable. Terminating...'
+  echo '* No App Token provided as environment variable.'
+  echo "* Terminating..."
   echoStatusFailed
   exit 1
 fi
@@ -54,6 +58,7 @@ echo "* autoremove: deprecated"
 echo "* os: deprecated"
 echo "* tags: ${tags}"
 echo "* apk_path: ${apk_path}"
+echo "* aab_path: ${aab_path}"
 echo
 echo "========== DEPLOYMENT VALUES =========="
 echo "* commitMessage: ${commitMessage}"
