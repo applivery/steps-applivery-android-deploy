@@ -57,6 +57,7 @@ echo "* notifyMessage: ${notifyMessage}"
 echo "* autoremove: deprecated"
 echo "* os: deprecated"
 echo "* tags: ${tags}"
+echo "* filter: ${filter}"
 echo "* apk_path: ${apk_path}"
 echo "* aab_path: ${aab_path}"
 echo
@@ -81,6 +82,7 @@ curl_cmd="$curl_cmd -F \"changelog=${changelog}\""
 curl_cmd="$curl_cmd -F \"notifyCollaborators=${notifyCollaborators}\""
 curl_cmd="$curl_cmd -F \"notifyEmployees=${notifyEmployees}\""
 curl_cmd="$curl_cmd -F \"tags=${tags}\""
+curl_cmd="$curl_cmd -F \"filter=${filter}\""
 
 # Choose binary file to upload (APK or AAB), prioritizing AABs over APKs if possible
 if [ -f "${aab_path}" ]; then
