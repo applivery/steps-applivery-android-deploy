@@ -103,7 +103,7 @@ curl_cmd="$curl_cmd -F \"deployer.info.buildUrl=${buildUrl}\""
 curl_cmd="$curl_cmd -F \"deployer.info.ciUrl=${ciUrl}\""
 curl_cmd="$curl_cmd -F \"deployer.info.repositoryUrl=${repositoryUrl}\""
 curl_cmd="$curl_cmd -F \"deployer.info.buildNumber=${buildNumber}\""
-curl_cmd="$curl_cmd https://api.applivery.io/v1/integrations/builds"
+curl_cmd="$curl_cmd https://upload.applivery.io/v1/integrations/builds"
 
 echo
 echo "=> Curl:"
